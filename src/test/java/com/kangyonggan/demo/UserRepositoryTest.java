@@ -25,4 +25,20 @@ public class UserRepositoryTest extends AbstractTest {
         userRepository.save(user);
     }
 
+    /**
+     * 根据主键查询
+     */
+    @Test
+    public void testFindById() {
+        System.out.println(userRepository.findById(1L));
+    }
+
+    /**
+     * 根据账号查询
+     */
+    @Test
+    public void testFindByAccount() {
+        System.out.println(userRepository.findUserByAccount("admin"));
+    }
+
 }
